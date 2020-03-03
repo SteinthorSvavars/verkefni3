@@ -1,0 +1,77 @@
+$font: 'Merriweather', serif;
+$bcolor: bisque;
+$buttontextalitur: #ff8;
+$recipelitur: lightblue;
+$baklitur: beige;
+$fontcolor: rgb(3, 11, 150);
+$mybuttcolor: #f7786b;
+@mixin bradius5{
+    border-radius: .5em;
+    border: 1px solid rgb(126, 126, 255)
+}
+body {
+    background-color: $baklitur;
+}
+.button {
+    background: $recipelitur;
+    padding: .2em;
+    font-size: 1em;
+    border-radius: 5px 5px 5px 5px ;
+
+}
+.mybutton {
+    width: 6em;
+    font-size: .85em;
+    color: $buttontextalitur;
+    background: $mybuttcolor;
+    text-decoration: wavy;
+    font-style: oblique;
+    text-align: center;
+    padding: .2em .5em;
+    margin: .5em 0;
+    @include bradius5;
+}
+
+@media screen and (min-width:37.5em) {
+    .container {
+        max-width: 40em;
+        margin: auto;
+    }
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    
+}
+
+@media screen and (min-width:60em) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 70em;
+        margin: 0 auto;
+    }
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    img {
+        width: 300px;
+        height: auto;
+    }
+}
+img {
+    border-radius: 20%;
+  }
